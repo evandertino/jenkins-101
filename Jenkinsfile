@@ -17,6 +17,7 @@ pipeline {
                 source ./venv/bin/activate
                 pip install --upgrade pip
                 pip install -r requirements.txt
+                deactivate
                 '''
             }
         }
@@ -28,6 +29,7 @@ pipeline {
                 source ./venv/bin/activate
                 python3 hello.py
                 python3 hello.py --name=Jenkins
+                deactivate
                 '''
             }
         }
